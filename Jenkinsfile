@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "your-dockerhub-username/springboot-app:latest"
+        DOCKER_IMAGE = "askat777/springboot-app:latest"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/<your-username>/<your-repo>.git'
+                git 'https://github.com/<https://github.com/AskatUddin/secure-java-app.git>/<your-repo>.git'
             }
         }
 
