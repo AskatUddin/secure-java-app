@@ -15,13 +15,14 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                // Use Maven wrapper
+                sh './mvnw clean install -DskipTests=false'
             }
         }
 
         stage('Unit Test') {
             steps {
-                sh 'mvn test'
+                sh './mvnw test'
             }
         }
 
